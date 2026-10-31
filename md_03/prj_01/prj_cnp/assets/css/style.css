@@ -175,19 +175,47 @@ h2{
 }
 
 
-/* media */
+/* form */
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+form label {
+    text-align: left;
+}
+
+form input,
+form textarea{
+    padding: 10px;
+    border: 1px solid var(--main-text-light);
+    color: var(--main-text-color);
+    border-radius: 8px;
+}
+
+form button{
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    border: 0;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background-color: var(--main-text-color);
+    transform: scale(1.05);
+}
+
+/* media */
 
 @media (width < 700px){
     .nav-hide{
         display: none;
-    }
-
-    .service-area{
-        flex-direction: column;
-    }
-
-    .grid{
-        grid-template-columns: 1fr;
     }
 }
